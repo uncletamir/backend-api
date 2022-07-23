@@ -28,6 +28,8 @@ Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth:api
 
 Route::resource('/post', PostController::class)->middleware('auth:api');
 Route::resource('/kategori', KategoriController::class)->middleware('auth:api');
+Route::resource('/lokasi', LokasiController::class)->middleware('auth:api');
+Route::resource('/inventory', InventoryController::class)->middleware('auth:api');
 // Route::resource('/kategori', KategoriController::class);
 Route::resource('/barang', BarangController::class)->middleware('auth:api');
 
